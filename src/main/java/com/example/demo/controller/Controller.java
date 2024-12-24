@@ -33,7 +33,7 @@ public class Controller {
     	addValue.setName(userDetails.getName());
     	addValue.setEmail(userDetails.getEmail());
     	allUsers.put(userDetails.getUserId(), addValue);
-    	return "users added";
+    	return "users";
     	 
     }
     @PutMapping(path="/{userId}")
