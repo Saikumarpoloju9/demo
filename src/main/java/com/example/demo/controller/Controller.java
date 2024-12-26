@@ -38,20 +38,6 @@ public class Controller {
     }
     @PutMapping(path="/{userId}")
     public String putMethod(@PathVariable String userId, @RequestBody RestUser userDetails) {
-    	if(allUsers.containsKey(userId))
-    	{
-    	  	RestUser addValue = new RestUser();
-        	addValue.setUserId(userDetails.getUserId());
-        	addValue.setName(userDetails.getName());
-        	addValue.setEmail(userDetails.getEmail());
-        	allUsers.put(userId, addValue);
-        	return "updated user";
-    	}
-    	else
-    	{
-    		return "userId not found";
-    	}
-	}
     
     @DeleteMapping(path="/{userId}")
     public String deleteMethod(@PathVariable String userId) {
@@ -64,6 +50,6 @@ public class Controller {
     	{
 		return "userId not found";
     	}
-    	}
+    }
     }
 
